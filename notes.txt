@@ -1,0 +1,42 @@
+* Self introduction
+* Python packaging is a platypus
+	* Show PyPA (or is it Python packaging?) logo
+	* Why platypus?
+		* Perculiar features when compared to "normie" systems
+		* Evolutions make sense when they are layed down
+		* Special advantages for particular use cases less found elsewhere
+	* Unlike actual platypuses, we can perform genetic alterations
+		* But still must keep in mind why they are designed this way
+		* Be careful to not nullify existing advantages
+		* Can replace features with other features satisfying the same goals
+* List the subtopics
+
+* Mention Dustin's Inside the Cheeseshop
+
+Per-artifact metadata (instead of per-version)
+
+    Why is metadata distributed with each artifact (distribution) and can differ within the same version?
+    Python packages predate indexes. PEP 508 direct URL is a thing.
+    A user does not need a package server to host Python packages.
+    Sort of. The community is gradually forming consensus some metadata shouldn’t differ. PEP 658.
+
+Pull-based platform declaration
+
+    Why does PyPI not automatically builds wheels for every project (besides the cost issue)?
+    Python does not have a “support tier” concept like many platforms.
+    A platform is “supported” if you can manage to build a Python interpreter on it. Very good for the community to grow.
+    Feature detection, but there are always edge cases.
+
+Installation metadata and installed files side-by-side
+
+    Why are Python package metadata stored directly beside the package installation, instead of living in a central location?
+    That’s the only “official” place for third-party tools to store stuff, and all Python packaging tools are third-party.
+    Easy discovery, especially easy to write tools to find them and guarantee the result is correct (if you find the code, you find the metadata).
+    Are there real technical downsides…?
+
+Meta question (conclusion-ish)
+
+    Why does Python packaging do things weird?
+    Python packaging contributors and Python contributors have surprisingly little overlap and historically receive relatively little effort.
+    Packaging contributors have more freedom doing what we want.
+    Overhead when discussing changes in the interpreter. Focus more on standards instead of specific tools to gather more people.
